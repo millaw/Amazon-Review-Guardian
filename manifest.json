@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Review Guardian",
+  "description": "Grades Amazon product reviews with A–F badges to help identify trustworthy reviews.",
+  "version": "1.0",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": [
+    "*://*.amazon.com/*",
+    "*://*.amazon.co.uk/*",
+    "*://*.amazon.ca/*",
+    "*://*.amazon.de/*",
+    "*://*.amazon.co.jp/*",
+    "*://*.amazon.it/*",
+    "*://*.amazon.fr/*",
+    "*://*.amazon.es/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.com/*",
+        "*://*.amazon.co.uk/*",
+        "*://*.amazon.ca/*",
+        "*://*.amazon.de/*",
+        "*://*.amazon.co.jp/*",
+        "*://*.amazon.it/*",
+        "*://*.amazon.fr/*",
+        "*://*.amazon.es/*"
+      ],
+      "js": ["contentScript.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon.png"
+    }
+  }
+}

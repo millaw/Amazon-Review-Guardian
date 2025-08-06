@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Amazon Review Guardian</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Amazon Review Guardian</h1>
+    <p class="tagline">Grades Amazon reviews (A–F) based on content and trust signals.</p>
+
+    <h2>Grading Criteria</h2>
+    <ul class="criteria">
+      <li><strong>Verified purchase:</strong> +2 points</li>
+      <li><strong>Review length > 300 chars:</strong> +2 points</li>
+      <li><strong>Review length > 100 chars:</strong> +1 point</li>
+      <li><strong>Extreme rating (1 or 5 stars):</strong> –1 point</li>
+      <li><strong>Neutral rating (3 stars):</strong> +1 point</li>
+      <li><strong>Negative words (scam, fake, broke...):</strong> –2 points</li>
+      <li><strong>Positive words (love, perfect...):</strong> +1 point</li>
+    </ul>
+
+    <h2>Grade Legend</h2>
+    <div class="legend">
+      <span class="badge grade-a">A</span> Trustworthy  
+      <span class="badge grade-b">B</span> Likely good  
+      <span class="badge grade-c">C</span> Average  
+      <span class="badge grade-d">D</span> Suspicious  
+      <span class="badge grade-f">F</span> Untrustworthy
+    </div>
+
+    <h2>How This Helps</h2>
+    <p class="explanation">
+      This extension helps you avoid fake or low-quality reviews by assigning trust grades to each one. No scraping. No personal data collected. Just clearer decisions.
+    </p>
+
+    <div class="footer">
+      <p>Built for real customers like you.</p>
+      <p class="version">Version 1.0</p>
+    </div>
+  </div>
+</body>
+</html>
